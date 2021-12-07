@@ -2,6 +2,7 @@ module.exports = {
     entry: { 
       index: '/src/app/index.js', 
       home: '/src/app/home.js',
+      login: "/src/app/login.js",
       BuscarEnvio: '/src/app/BuscarEnvio.js',
       ProgramarEnvio: '/src/app/ProgramarEnvio.js',
       // rutas aqui

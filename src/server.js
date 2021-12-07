@@ -6,11 +6,11 @@ const app = express()
 app.set('port', process.env.PORT || 3000)
 
 //Morgan nos ayuda a manejar todas las peticiones que se reciben y lo imprime en la consola
-app.use(morgan('dev'))
+app.use(morgan('dev')) 
 app.use(express.json())
 
 //Routes
-app.use("/servi",require('./routes/routes'))
+app.use(require('./routes/routes'))
 
 app.use(express.static(path.join(__dirname, '/public')))
 

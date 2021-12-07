@@ -1,5 +1,4 @@
-
-import React, { Component } from "react";
+import React from "react";
 import { render } from "react-dom";
 import SlideBar from   "./components/SlideBar";
 import NavBar from "./components/NavBar";

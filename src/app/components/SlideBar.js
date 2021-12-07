@@ -3,7 +3,6 @@ import style from'../css/slidebar.module.css'
 
 export default function SlideBar(){
     window.onload = () => {
-        console.log("test")
         const $containerFixed = document.querySelector(`.${style['main-container']}`)
         window.innerWidth >= 1500 ?
            $containerFixed.innerHTML += `<div class='container-move'>${document.querySelectorAll(`.${style["container-move"]}`)[1].innerHTML}</div>`  
