@@ -44,7 +44,6 @@ export default function SlideBar(){
      }
     return (
         <>
-        <div id={`${style["test"]}`}>test</div>
         <div className={style['main-container']}>
             <div className={`${style['container-fixed']} ${style['test']}`}>
                 <div className={style["container-move"]}>

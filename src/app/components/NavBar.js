@@ -20,9 +20,6 @@ console.log(obj);
     return (
         
         <nav className = {`${obj['sb-topnav']} ${obj['navbar']} ${obj['navbar-expand']} ${obj['navbar-dark']} ${obj['bg-dark']}`} >
-            
-            
-            
             <button className={`${obj['btn']} ${obj['btn-link']} ${obj['btn-sm']} ${obj['order-1']} ${obj['rder-lg-0']} ${obj['me-4']} ${obj['me-lg-0']}`} id="sidebarToggle" href="#!"><i className={`${obj['fas']} ${obj['fa-bars']}`}></i></button>
           
             <form className={`${obj['d-none']} ${obj['d-md-inline-block']} ${obj['form-inline']} ${obj['ms-auto']} ${obj['me-0']} ${obj['me-md-3']} ${obj['my-2']} ${obj['my-md-0']}`}>
