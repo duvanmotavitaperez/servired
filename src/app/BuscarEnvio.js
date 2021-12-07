@@ -1,11 +1,8 @@
-
 import React, { Component } from "react";
 import { render } from "react-dom";
 import NavBar from "./components/NavBar";
 import Menu from "./components/Menu";
-import HomeUserContent from "./components/HomeUserContent";
+import BuscarEnviocontent from "./components/BuscarEnviocontent";
 render(<NavBar/>, document.getElementById('nav'));
 render(<Menu/>, document.getElementById('menu'));
-render(<HomeUserContent/>, document.getElementById('homeusercontent'));
-
-
+render(<BuscarEnviocontent/>, document.getElementById('homeusercontent'));

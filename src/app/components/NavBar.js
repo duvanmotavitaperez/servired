@@ -25,6 +25,7 @@ console.log(obj);
             <form className={`${obj['d-none']} ${obj['d-md-inline-block']} ${obj['form-inline']} ${obj['ms-auto']} ${obj['me-0']} ${obj['me-md-3']} ${obj['my-2']} ${obj['my-md-0']}`}>
                 <div className={`${obj['input-group']}`}>
                     <input className={`${obj['form-control']}`} type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    
                     <button className={`${obj['btn']} ${obj['btn-primary']}`} id="btnNavbarSearch" type="button"><i className={`${obj['fas']} ${obj['fa-search']}`}></i></button>
                 </div>
             </form>
