@@ -10,7 +10,7 @@ app.use(morgan('dev'))
 app.use(express.json())
 
 //Routes
-app.use(require('./routes/routes'))
+app.use("/servi",require('./routes/routes'))
 
 app.use(express.static(path.join(__dirname, '/public')))
 

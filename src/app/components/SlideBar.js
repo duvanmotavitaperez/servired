@@ -3,7 +3,7 @@ import style from'../css/slidebar.module.css'
 
 export default function SlideBar(){
     window.onload = () => {
-        console.log(style['main-container'])
+        console.log("test")
         const $containerFixed = document.querySelector(`.${style['main-container']}`)
         window.innerWidth >= 1500 ?
            $containerFixed.innerHTML += `<div class='container-move'>${document.querySelectorAll(`.${style["container-move"]}`)[1].innerHTML}</div>`  
@@ -44,6 +44,7 @@ export default function SlideBar(){
      }
     return (
         <>
+        <div id={`${style["test"]}`}>test</div>
         <div className={style['main-container']}>
             <div className={`${style['container-fixed']} ${style['test']}`}>
                 <div className={style["container-move"]}>
