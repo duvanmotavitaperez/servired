@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/app/components/Login.js":
-/*!*************************************!*\
-  !*** ./src/app/components/Login.js ***!
-  \*************************************/
+/***/ "./src/app/components/InputItem.js":
+/*!*****************************************!*\
+  !*** ./src/app/components/InputItem.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\n/* harmony import */ var _css_login_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/login.module.css */ \"./src/app/css/login.module.css\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nfunction Login() {\n  window.onload = function () {\n    var $form = document.getElementById('formdata');\n    var $eye = document.getElementById('showText');\n    var $textArea = document.querySelector('textarea');\n    var $buttonSend = document.querySelector('.button-send');\n    var $alert = document.querySelector('.alert');\n    var $password = document.querySelector('.input-item.password');\n    $eye.addEventListener('click', function () {\n      $eye.classList.toggle('show-text');\n    });\n    $buttonSend.addEventListener('click', function () {\n      var form = new FormData($form);\n      var username = form.get('username');\n      var pass = form.get('userpass');\n\n      if (username == '' || pass == '') {\n        $alert.classList.toggle('hidden');\n        $textArea.addEventListener('focus', function () {\n          return $alert.classList.add('hidden');\n        });\n      } else {\n        fetch(\"/main\", {\n          method: \"POST\",\n          body: form\n        }).then(function (response) {\n          response.json();\n        }).then(function (data) {\n          return console.log(data);\n        });\n      }\n    });\n    $form.addEventListener('submit', function (event) {\n      event.preventDefault();\n    });\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"main-container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"form\", {\n    id: \"formdata\",\n    method: \"post\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"input\", {\n    type: \"hidden\",\n    value: \"{{token}}\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"p\", {\n    className: \"alert hidden\"\n  }, \"Por favor completa todos los campos\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"content-input\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"textarea\", {\n    className: \"input-item\",\n    name: \"username\",\n    id: \"username\",\n    cols: \"1\",\n    rows: \"1\",\n    placeholder: \"Nombre del usuario\",\n    spellCheck: \"false\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"content-input\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"input\", {\n    className: \"input-item password\",\n    type: \"password\",\n    name: \"userpass\",\n    placeholder: \"Contrase\\xF1a\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"span\", {\n    className: \"unmask-eye show-text\",\n    id: \"showText\",\n    style: {\n      display: \"inline-block\"\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"contain-button\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"span\", {\n    className: \"button-send\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"i\", {\n    className: \"send fa fa-paper-plane\",\n    \"aria-hidden\": \"true\"\n  })))));\n}\n\n//# sourceURL=webpack://servired/./src/app/components/Login.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ InputItem)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction InputItem(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"content-input\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"textarea\", {\n    className: \"input-item\",\n    name: props.name,\n    id: props.id,\n    cols: \"1\",\n    rows: \"1\",\n    placeholder: props.placeholder,\n    spellCheck: \"false\"\n  }));\n}\n\n//# sourceURL=webpack://servired/./src/app/components/InputItem.js?");
+
+/***/ }),
+
+/***/ "./src/app/components/SendButton.js":
+/*!******************************************!*\
+  !*** ./src/app/components/SendButton.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ SendButton)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction SendButton() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"contain-button\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: \"button-send\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"i\", {\n    className: \"send fa fa-paper-plane\",\n    \"aria-hidden\": \"true\"\n  })));\n}\n\n//# sourceURL=webpack://servired/./src/app/components/SendButton.js?");
 
 /***/ }),
 
@@ -26,47 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Login */ \"./src/app/components/Login.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\n\n\n(0,react_dom__WEBPACK_IMPORTED_MODULE_2__.render)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), document.querySelector('main'));\n\n//# sourceURL=webpack://servired/./src/app/login.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/app/css/login.module.css":
-/*!****************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/app/css/login.module.css ***!
-  \****************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../public/media/backLogo.png */ \"./src/public/media/backLogo.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../public/media/sprite.png */ \"./src/public/media/sprite.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\nvar ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root {\\r\\n    --height-header: 4rem;\\r\\n    --primary-color: #1B3764;\\r\\n    --secondary-color: #162F54;\\r\\n    --alternative-color: #F7901E;\\r\\n    --transparent-color: #00000075;\\r\\n}\\r\\n\\r\\n::-webkit-scrollbar {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\nmain {\\r\\n    background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\r\\n    background-repeat: no-repeat;\\r\\n    background-position: center;\\r\\n    width: 100vw;\\r\\n    height: 100vh;\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    justify-content: center;\\r\\n    align-items: center;\\r\\n}\\r\\n\\r\\n    .tuM4i8paBOoXGMwb0IiY {\\r\\n        width: 100%;\\r\\n        height: 100%;\\r\\n        display: flex;\\r\\n        flex-direction: column;\\r\\n        justify-content: center;\\r\\n        align-items: center;\\r\\n        background-color: var(--transparent-color);\\r\\n    }\\r\\n        form {\\r\\n            display: flex;\\r\\n            flex-direction: column;\\r\\n            align-items: center;\\r\\n            gap: 15PX;\\r\\n        }\\r\\n            .AqCpOLxuzxvP5_qTGlhQ {\\r\\n                padding-bottom: .5rem;\\r\\n                border-bottom: 1px solid #ffffff;\\r\\n                width: 100%;\\r\\n                margin: 10px;\\r\\n                display: flex;\\r\\n            }\\r\\n                .wLW0HSitpsieQMYaxkdg::placeholder{\\r\\n                    font-family: monospace;\\r\\n                    color: rgb(206, 206, 206);\\r\\n                }\\r\\n                .wLW0HSitpsieQMYaxkdg {\\r\\n                    font-size: 1.3em;\\r\\n                    display: block;\\r\\n                    background-color: transparent;\\r\\n                    border: none;\\r\\n                    color: #fff;\\r\\n                    outline: none;\\r\\n                }\\r\\n                .EkkQSy2lDtJMZc3ztFxu.vpVKGGR29jT5OBCS1uqU{\\r\\n                    display: inline-block;\\r\\n                    background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \");\\r\\n                    background-position: -85px 90px;\\r\\n                    width: 22px;\\r\\n                    height: 22px;\\r\\n                    position: relative;\\r\\n                    cursor: pointer;\\r\\n                    vertical-align: middle;\\r\\n                }\\r\\n                .EkkQSy2lDtJMZc3ztFxu{\\r\\n                    display: inline-block;\\r\\n                    background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \");\\r\\n                    background-position: -44px -86px;\\r\\n                    width: 22px;\\r\\n                    height: 22px;\\r\\n                    position: relative;\\r\\n                    cursor: pointer;\\r\\n                    vertical-align: middle;\\r\\n                }\\r\\n                \\r\\n                textarea {\\r\\n                    resize: none;\\r\\n                    max-lines: 1;\\r\\n                    width: 200px;\\r\\n                    font-size: 1.5em;\\r\\n                    background: transparent;\\r\\n                    border: none;\\r\\n                    height: 24px;\\r\\n                    resize: none;\\r\\n                    outline: none;\\r\\n                    overflow: hidden;\\r\\n                    text-rendering: auto;\\r\\n                    letter-spacing: normal;\\r\\n                    word-spacing: normal;\\r\\n                    line-height: normal;\\r\\n                    text-transform: none;\\r\\n                    text-shadow: none;\\r\\n                    display: block;\\r\\n                    text-align: start;\\r\\n                    appearance: auto;\\r\\n                    -webkit-rtl-ordering: logical;\\r\\n                    white-space: pre-wrap;\\r\\n                    overflow-wrap: normal;\\r\\n                    column-count: initial !important;\\r\\n                    margin: 0em; \\r\\n                    padding: 2px;      \\r\\n                }           \\r\\n                .DVHq1dyRbInNjzb9kY8p {\\r\\n                    margin-top: 5px;\\r\\n                    text-align: center;\\r\\n                    vertical-align: center;\\r\\n                    color: #fff;\\r\\n                    font-size: 1.5rem;\\r\\n                    margin-top: 1em;\\r\\n                }\\r\\n                .DVHq1dyRbInNjzb9kY8p span {\\r\\n                    margin-top: 10px;\\r\\n                    padding: 0.3em 0.35em;\\r\\n                    border-radius: 50%;\\r\\n                    border: 1px solid #fff;\\r\\n                }\\r\\n                .DVHq1dyRbInNjzb9kY8p span:active {\\r\\n                  color: var(--alternative-color);\\r\\n                  transform: scale(.1);\\r\\n                }\\r\\n                .DVHq1dyRbInNjzb9kY8p span .j8HPpb4r5_5dWmFCypl8{\\r\\n                    position: relative;\\r\\n                    right: 2px;\\r\\n                }\\r\\n            .MgHZUTsPUhAT0RoecqBd {\\r\\n                display: flex;\\r\\n                flex-direction: column;\\r\\n                justify-content: center;\\r\\n                text-align: center;\\r\\n                vertical-align: middle;           \\r\\n                color: rgb(255, 0, 0);\\r\\n                width: 90%;\\r\\n                font-weight: lighter;\\r\\n                height: 50px;\\r\\n                border-radius: 5%;\\r\\n                background-color: rgba(68, 68, 68, 0.404);\\r\\n                position: relative;\\r\\n                margin-bottom: 8px;\\r\\n            }\\r\\n            .MgHZUTsPUhAT0RoecqBd::after {\\r\\n                position: absolute;\\r\\n                border-top: 15px solid rgba(68, 68, 68, 0.404);;\\r\\n                border-right: 15px solid transparent;\\r\\n                border-bottom: 15px solid transparent;\\r\\n                border-left: 15px solid transparent;\\r\\n                bottom: -30px;\\r\\n                left: calc(50% - 15px);\\r\\n                content: '';   \\r\\n            }\\r\\n            .MgHZUTsPUhAT0RoecqBd.nXEZsaCJFqHGLxQ6EUhp {\\r\\n                visibility: hidden;\\r\\n            }\\r\\n            \\r\\n.uYOonlDhDC1Qi6bfjE6w {\\r\\n    position: fixed;\\r\\n    left: 10px;\\r\\n    bottom: 10px;\\r\\n}\", \"\"]);\n// Exports\n___CSS_LOADER_EXPORT___.locals = {\n\t\"main-container\": \"tuM4i8paBOoXGMwb0IiY\",\n\t\"content-input\": \"AqCpOLxuzxvP5_qTGlhQ\",\n\t\"input-item\": \"wLW0HSitpsieQMYaxkdg\",\n\t\"unmask-eye\": \"EkkQSy2lDtJMZc3ztFxu\",\n\t\"show-text\": \"vpVKGGR29jT5OBCS1uqU\",\n\t\"contain-button\": \"DVHq1dyRbInNjzb9kY8p\",\n\t\"send\": \"j8HPpb4r5_5dWmFCypl8\",\n\t\"alert\": \"MgHZUTsPUhAT0RoecqBd\",\n\t\"hidden\": \"nXEZsaCJFqHGLxQ6EUhp\",\n\t\"ctransparentit\": \"uYOonlDhDC1Qi6bfjE6w\"\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://servired/./src/app/css/login.module.css?./node_modules/css-loader/dist/cjs.js");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\n/*\r\n  MIT License http://www.opensource.org/licenses/mit-license.php\r\n  Author Tobias Koppers @sokra\r\n*/\r\nmodule.exports = function (cssWithMappingToString) {\r\n  var list = []; // return the list of modules as css string\r\n\r\n  list.toString = function toString() {\r\n    return this.map(function (item) {\r\n      var content = \"\";\r\n      var needLayer = typeof item[5] !== \"undefined\";\r\n\r\n      if (item[4]) {\r\n        content += \"@supports (\".concat(item[4], \") {\");\r\n      }\r\n\r\n      if (item[2]) {\r\n        content += \"@media \".concat(item[2], \" {\");\r\n      }\r\n\r\n      if (needLayer) {\r\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\r\n      }\r\n\r\n      content += cssWithMappingToString(item);\r\n\r\n      if (needLayer) {\r\n        content += \"}\";\r\n      }\r\n\r\n      if (item[2]) {\r\n        content += \"}\";\r\n      }\r\n\r\n      if (item[4]) {\r\n        content += \"}\";\r\n      }\r\n\r\n      return content;\r\n    }).join(\"\");\r\n  }; // import a list of modules into the list\r\n\r\n\r\n  list.i = function i(modules, media, dedupe, supports, layer) {\r\n    if (typeof modules === \"string\") {\r\n      modules = [[null, modules, undefined]];\r\n    }\r\n\r\n    var alreadyImportedModules = {};\r\n\r\n    if (dedupe) {\r\n      for (var k = 0; k < this.length; k++) {\r\n        var id = this[k][0];\r\n\r\n        if (id != null) {\r\n          alreadyImportedModules[id] = true;\r\n        }\r\n      }\r\n    }\r\n\r\n    for (var _k = 0; _k < modules.length; _k++) {\r\n      var item = [].concat(modules[_k]);\r\n\r\n      if (dedupe && alreadyImportedModules[item[0]]) {\r\n        continue;\r\n      }\r\n\r\n      if (typeof layer !== \"undefined\") {\r\n        if (typeof item[5] === \"undefined\") {\r\n          item[5] = layer;\r\n        } else {\r\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\r\n          item[5] = layer;\r\n        }\r\n      }\r\n\r\n      if (media) {\r\n        if (!item[2]) {\r\n          item[2] = media;\r\n        } else {\r\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\r\n          item[2] = media;\r\n        }\r\n      }\r\n\r\n      if (supports) {\r\n        if (!item[4]) {\r\n          item[4] = \"\".concat(supports);\r\n        } else {\r\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\r\n          item[4] = supports;\r\n        }\r\n      }\r\n\r\n      list.push(item);\r\n    }\r\n  };\r\n\r\n  return list;\r\n};\n\n//# sourceURL=webpack://servired/./node_modules/css-loader/dist/runtime/api.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\nmodule.exports = function (url, options) {\r\n  if (!options) {\r\n    options = {};\r\n  }\r\n\r\n  if (!url) {\r\n    return url;\r\n  }\r\n\r\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\r\n\r\n  if (/^['\"].*['\"]$/.test(url)) {\r\n    url = url.slice(1, -1);\r\n  }\r\n\r\n  if (options.hash) {\r\n    url += options.hash;\r\n  } // Should url be wrapped?\r\n  // See https://drafts.csswg.org/css-values-3/#urls\r\n\r\n\r\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\r\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\r\n  }\r\n\r\n  return url;\r\n};\n\n//# sourceURL=webpack://servired/./node_modules/css-loader/dist/runtime/getUrl.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
-  \**************************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\nmodule.exports = function (i) {\r\n  return i[1];\r\n};\n\n//# sourceURL=webpack://servired/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _components_InputItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/InputItem */ \"./src/app/components/InputItem.js\");\n/* harmony import */ var _components_SendButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/SendButton */ \"./src/app/components/SendButton.js\");\n\n\n\n\n\nfunction Login() {\n  window.onload = function () {\n    var $form = document.getElementById('formdata');\n    var $eye = document.getElementById('showText');\n    var $textArea = document.querySelector('textarea');\n    var $buttonSend = document.querySelector('.button-send');\n    var $alert = document.querySelector('.alert');\n    var $password = document.querySelector('.input-item.password');\n    $eye.addEventListener('click', function () {\n      $eye.classList.toggle('show-text');\n    });\n    $buttonSend.addEventListener('click', function () {\n      var form = new FormData($form);\n      var username = form.get('username');\n      var pass = form.get('userpass');\n\n      if (username == '' || pass == '') {\n        $alert.classList.toggle('hidden');\n        $textArea.addEventListener('focus', function () {\n          return $alert.classList.add('hidden');\n        });\n      } else {\n        fetch(\"/main\", {\n          method: \"POST\",\n          body: form\n        }).then(function (response) {\n          response.json();\n        }).then(function (data) {\n          return console.log(data);\n        });\n      }\n    });\n    $form.addEventListener('submit', function (event) {\n      event.preventDefault();\n    });\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"main-container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"form\", {\n    id: \"formdata\",\n    method: \"post\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n    type: \"hidden\",\n    value: \"{{token}}\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: \"alert hidden\"\n  }, \"Por favor completa todos los campos\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InputItem__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    name: \"username\",\n    id: \"username\",\n    placeholder: \"Nombre del usuario\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"content-input\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n    className: \"input-item password\",\n    type: \"password\",\n    name: \"userpass\",\n    placeholder: \"Contrase\\xF1a\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", {\n    className: \"unmask-eye show-text\",\n    id: \"showText\",\n    style: {\n      display: \"inline-block\"\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_SendButton__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)));\n}\n\n(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Login, null), document.querySelector('main'));\n\n//# sourceURL=webpack://servired/./src/app/login.js?");
 
 /***/ }),
 
@@ -158,96 +128,6 @@ eval("\r\n\r\nif (false) {} else {\r\n  module.exports = __webpack_require__(/*!
 
 eval("\r\n\r\nif (false) {} else {\r\n  module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ \"./node_modules/scheduler/cjs/scheduler-tracing.development.js\");\r\n}\r\n\n\n//# sourceURL=webpack://servired/./node_modules/scheduler/tracing.js?");
 
-/***/ }),
-
-/***/ "./src/app/css/login.module.css":
-/*!**************************************!*\
-  !*** ./src/app/css/login.module.css ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ \"./node_modules/style-loader/dist/runtime/styleDomAPI.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ \"./node_modules/style-loader/dist/runtime/insertBySelector.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ \"./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ \"./node_modules/style-loader/dist/runtime/insertStyleElement.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ \"./node_modules/style-loader/dist/runtime/styleTagTransform.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_login_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./login.module.css */ \"./node_modules/css-loader/dist/cjs.js!./src/app/css/login.module.css\");\n\n      \n      \n      \n      \n      \n      \n      \n      \n      \n\nvar options = {};\n\noptions.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());\noptions.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());\n\n      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, \"head\");\n    \noptions.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());\noptions.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());\n\nvar update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_login_module_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"], options);\n\n\n\n\n       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_login_module_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"] && _node_modules_css_loader_dist_cjs_js_login_module_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"].locals ? _node_modules_css_loader_dist_cjs_js_login_module_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"].locals : undefined);\n\n\n//# sourceURL=webpack://servired/./src/app/css/login.module.css?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \****************************************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\nvar stylesInDOM = [];\r\n\r\nfunction getIndexByIdentifier(identifier) {\r\n  var result = -1;\r\n\r\n  for (var i = 0; i < stylesInDOM.length; i++) {\r\n    if (stylesInDOM[i].identifier === identifier) {\r\n      result = i;\r\n      break;\r\n    }\r\n  }\r\n\r\n  return result;\r\n}\r\n\r\nfunction modulesToDom(list, options) {\r\n  var idCountMap = {};\r\n  var identifiers = [];\r\n\r\n  for (var i = 0; i < list.length; i++) {\r\n    var item = list[i];\r\n    var id = options.base ? item[0] + options.base : item[0];\r\n    var count = idCountMap[id] || 0;\r\n    var identifier = \"\".concat(id, \" \").concat(count);\r\n    idCountMap[id] = count + 1;\r\n    var indexByIdentifier = getIndexByIdentifier(identifier);\r\n    var obj = {\r\n      css: item[1],\r\n      media: item[2],\r\n      sourceMap: item[3],\r\n      supports: item[4],\r\n      layer: item[5]\r\n    };\r\n\r\n    if (indexByIdentifier !== -1) {\r\n      stylesInDOM[indexByIdentifier].references++;\r\n      stylesInDOM[indexByIdentifier].updater(obj);\r\n    } else {\r\n      var updater = addElementStyle(obj, options);\r\n      options.byIndex = i;\r\n      stylesInDOM.splice(i, 0, {\r\n        identifier: identifier,\r\n        updater: updater,\r\n        references: 1\r\n      });\r\n    }\r\n\r\n    identifiers.push(identifier);\r\n  }\r\n\r\n  return identifiers;\r\n}\r\n\r\nfunction addElementStyle(obj, options) {\r\n  var api = options.domAPI(options);\r\n  api.update(obj);\r\n\r\n  var updater = function updater(newObj) {\r\n    if (newObj) {\r\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {\r\n        return;\r\n      }\r\n\r\n      api.update(obj = newObj);\r\n    } else {\r\n      api.remove();\r\n    }\r\n  };\r\n\r\n  return updater;\r\n}\r\n\r\nmodule.exports = function (list, options) {\r\n  options = options || {};\r\n  list = list || [];\r\n  var lastIdentifiers = modulesToDom(list, options);\r\n  return function update(newList) {\r\n    newList = newList || [];\r\n\r\n    for (var i = 0; i < lastIdentifiers.length; i++) {\r\n      var identifier = lastIdentifiers[i];\r\n      var index = getIndexByIdentifier(identifier);\r\n      stylesInDOM[index].references--;\r\n    }\r\n\r\n    var newLastIdentifiers = modulesToDom(newList, options);\r\n\r\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\r\n      var _identifier = lastIdentifiers[_i];\r\n\r\n      var _index = getIndexByIdentifier(_identifier);\r\n\r\n      if (stylesInDOM[_index].references === 0) {\r\n        stylesInDOM[_index].updater();\r\n\r\n        stylesInDOM.splice(_index, 1);\r\n      }\r\n    }\r\n\r\n    lastIdentifiers = newLastIdentifiers;\r\n  };\r\n};\n\n//# sourceURL=webpack://servired/./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
-  \********************************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\nvar memo = {};\r\n/* istanbul ignore next  */\r\n\r\nfunction getTarget(target) {\r\n  if (typeof memo[target] === \"undefined\") {\r\n    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\r\n\r\n    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\r\n      try {\r\n        // This will throw an exception if access to iframe is blocked\r\n        // due to cross-origin restrictions\r\n        styleTarget = styleTarget.contentDocument.head;\r\n      } catch (e) {\r\n        // istanbul ignore next\r\n        styleTarget = null;\r\n      }\r\n    }\r\n\r\n    memo[target] = styleTarget;\r\n  }\r\n\r\n  return memo[target];\r\n}\r\n/* istanbul ignore next  */\r\n\r\n\r\nfunction insertBySelector(insert, style) {\r\n  var target = getTarget(insert);\r\n\r\n  if (!target) {\r\n    throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\r\n  }\r\n\r\n  target.appendChild(style);\r\n}\r\n\r\nmodule.exports = insertBySelector;\n\n//# sourceURL=webpack://servired/./node_modules/style-loader/dist/runtime/insertBySelector.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
-  \**********************************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\n/* istanbul ignore next  */\r\nfunction insertStyleElement(options) {\r\n  var element = document.createElement(\"style\");\r\n  options.setAttributes(element, options.attributes);\r\n  options.insert(element, options.options);\r\n  return element;\r\n}\r\n\r\nmodule.exports = insertStyleElement;\n\n//# sourceURL=webpack://servired/./node_modules/style-loader/dist/runtime/insertStyleElement.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
-  \**********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("\r\n\r\n/* istanbul ignore next  */\r\nfunction setAttributesWithoutAttributes(styleElement) {\r\n  var nonce =  true ? __webpack_require__.nc : 0;\r\n\r\n  if (nonce) {\r\n    styleElement.setAttribute(\"nonce\", nonce);\r\n  }\r\n}\r\n\r\nmodule.exports = setAttributesWithoutAttributes;\n\n//# sourceURL=webpack://servired/./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
-  \***************************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\n/* istanbul ignore next  */\r\nfunction apply(styleElement, options, obj) {\r\n  var css = \"\";\r\n\r\n  if (obj.supports) {\r\n    css += \"@supports (\".concat(obj.supports, \") {\");\r\n  }\r\n\r\n  if (obj.media) {\r\n    css += \"@media \".concat(obj.media, \" {\");\r\n  }\r\n\r\n  var needLayer = typeof obj.layer !== \"undefined\";\r\n\r\n  if (needLayer) {\r\n    css += \"@layer\".concat(obj.layer.length > 0 ? \" \".concat(obj.layer) : \"\", \" {\");\r\n  }\r\n\r\n  css += obj.css;\r\n\r\n  if (needLayer) {\r\n    css += \"}\";\r\n  }\r\n\r\n  if (obj.media) {\r\n    css += \"}\";\r\n  }\r\n\r\n  if (obj.supports) {\r\n    css += \"}\";\r\n  }\r\n\r\n  var sourceMap = obj.sourceMap;\r\n\r\n  if (sourceMap && typeof btoa !== \"undefined\") {\r\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\r\n  } // For old IE\r\n\r\n  /* istanbul ignore if  */\r\n\r\n\r\n  options.styleTagTransform(css, styleElement, options.options);\r\n}\r\n\r\nfunction removeStyleElement(styleElement) {\r\n  // istanbul ignore if\r\n  if (styleElement.parentNode === null) {\r\n    return false;\r\n  }\r\n\r\n  styleElement.parentNode.removeChild(styleElement);\r\n}\r\n/* istanbul ignore next  */\r\n\r\n\r\nfunction domAPI(options) {\r\n  var styleElement = options.insertStyleElement(options);\r\n  return {\r\n    update: function update(obj) {\r\n      apply(styleElement, options, obj);\r\n    },\r\n    remove: function remove() {\r\n      removeStyleElement(styleElement);\r\n    }\r\n  };\r\n}\r\n\r\nmodule.exports = domAPI;\n\n//# sourceURL=webpack://servired/./node_modules/style-loader/dist/runtime/styleDomAPI.js?");
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
-  \*********************************************************************/
-/***/ ((module) => {
-
-eval("\r\n\r\n/* istanbul ignore next  */\r\nfunction styleTagTransform(css, styleElement) {\r\n  if (styleElement.styleSheet) {\r\n    styleElement.styleSheet.cssText = css;\r\n  } else {\r\n    while (styleElement.firstChild) {\r\n      styleElement.removeChild(styleElement.firstChild);\r\n    }\r\n\r\n    styleElement.appendChild(document.createTextNode(css));\r\n  }\r\n}\r\n\r\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://servired/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/public/media/backLogo.png":
-/*!***************************************!*\
-  !*** ./src/public/media/backLogo.png ***!
-  \***************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"f10142d8c2c47f25d4f5.png\";\n\n//# sourceURL=webpack://servired/./src/public/media/backLogo.png?");
-
-/***/ }),
-
-/***/ "./src/public/media/sprite.png":
-/*!*************************************!*\
-  !*** ./src/public/media/sprite.png ***!
-  \*************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"999f3c5fcb7a48141350.png\";\n\n//# sourceURL=webpack://servired/./src/public/media/sprite.png?");
-
 /***/ })
 
 /******/ 	});
@@ -264,7 +144,7 @@ eval("module.exports = __webpack_require__.p + \"999f3c5fcb7a48141350.png\";\n\n
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
+/******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -276,22 +156,7 @@ eval("module.exports = __webpack_require__.p + \"999f3c5fcb7a48141350.png\";\n\n
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -302,18 +167,6 @@ eval("module.exports = __webpack_require__.p + \"999f3c5fcb7a48141350.png\";\n\n
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -330,52 +183,6 @@ eval("module.exports = __webpack_require__.p + \"999f3c5fcb7a48141350.png\";\n\n
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"login": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/
