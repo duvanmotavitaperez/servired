@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Futura LtCn BT';
     src:url('../fonts/FuturaBT-LightCondensed.woff2') format('woff2');
@@ -46,94 +47,6 @@ body {
     background-color: var(--primary-color);
     color: #fff;
 }
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: var(--height-header);
-        background-color: var(--secondary-color);   
-        z-index: 10;
-    }   
-        .logo {
-            display: flex;
-            align-items: center;
-            padding-left: 2rem;
-            box-sizing: border-box;
-            vertical-align: middle;
-        }
-            .logo img{
-                vertical-align: middle;
-                height: 90%;
-                object-fit: scale-down;
-                box-sizing: border-box;
-            }
-        menu {
-            display: flex;
-            align-items: center;
-            padding-right: 1rem;
-        }   
-            .menu-icon::before {
-                position: absolute;
-                display: none;
-                font-size: 1.3rem;
-            }
-            menu ul {
-                padding: 0;
-                cursor: pointer;
-            }
-            menu ul li {
-                font-family: Futura LtCn BT;
-                font-size: 1.3rem;
-                list-style: none;
-                display: inline;
-                padding: 0 .5rem;
-            }
-            menu ul li a{
-                font-family: Futura LtCn BT;
-                font-size: 1em;
-                letter-spacing: 1px;
-                color: #fff;
-            }
-            menu ul li a strong {
-                font-family: Futura LtCn BT;
-                font-size: 1em;
-                letter-spacing: 1px;
-                color: #F7901E;
-            }
-            @media screen and (max-width: 872px){
-                menu ul{
-                    position: fixed;
-                    top: var(--height-header);
-                    right: 0;
-                    background-color: #00000080;
-                    transform: translateX(15rem);
-
-                }
-                menu ul li{
-                    text-align: end;
-                    display: block;
-                    padding: 1rem;
-                }
-                menu ul li a{
-                    color: var(--alternative-color);
-                }
-                .menu-icon::before {
-                    cursor: pointer;
-                    position: static;
-                    display: inline;
-                    color: var(--alternative-color);
-                }
-                i.menu-icon:active {
-                    transform: scale(.9);
-                }
-                i.menu-icon:active::before{
-                    color: #fff;
-                }
-           }
-
     .main-container {
         overflow-x: hidden;
     }
