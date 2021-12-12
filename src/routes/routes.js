@@ -17,6 +17,6 @@ router.get('/BuscarEnvio', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../public/BuscarEnvio.html'))
 })
 router.get('/ProgramarEnvio', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../public/ProgramarEnvio.html'))
+    res.sendFile(path.resolve(__dirname, '../public/programarEnvio.html'))
 })
 module.exports = router

@@ -1,49 +1,56 @@
 import React from "react"
-import obj from '../../public/css/styles.css'
 
-// 1. "sb-sidenav accordion sb-sidenav-dark"
-// 2. "sb-sidenav-menu"
-// 3. "nav"
-// 4. "nav-link collapsed"
-// 5. "sb-nav-link-icon"
-// 6. "sb-sidenav-collapse-arrow"
-// 7. "nav-link collapsed"
-// 8. "sb-nav-link-icon"
-
-// 1. id id="layoutSidenav">
-// 2. id="layoutSidenav_nav"
-// 3. id="sidenavAccordion"
 export default function Menu () { 
-console.log(obj);
+    window.onload = () =>  {
+        const script2  = document.createElement('script')
+        script2.src = "/js/scripts.js"
+        script2.async = true
+        document.body.appendChild(script2)
+    }
     return (
-    <div itemID={`${obj['#layoutSidenav']}`} > 
-        <div itemID={`${obj['#layoutSidenav_nav']}`}>
-            <nav className={`${obj['sb-sidenav']} ${obj['accordion']} ${obj['sb-sidenav-dark']}`} itemID={`${obj['#sidenavAccordion']}`}>
-                <div className={`${obj['sb-sidenav-menu']}`}>
-                    <div className={`${obj['nav']}`}>
-                        <a className={`${obj['nav-link']} ${obj['collapsed']}`} href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                            <div className={`${obj['sb-nav-link-icon']}`}></div>
-                            Programar Envio
-                            <div className={`${obj['sb-sidenav-collapse-arrow']}`}><i class="fas fa-angle-down"></i></div>
-                        </a>
-
-                        <a className={`${obj['nav-link']} ${obj['collapsed']}`} href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                            <div className={`${obj['sb-nav-link-icon']}`}></div>
-                            Programar Recogida
-                            <div className={`${obj['sb-sidenav-collapse-arrow']}`}><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <a className={`${obj['nav-link']} ${obj['collapsed']}`} href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                            <div className={`${obj['sb-nav-link-icon']}`}></div>
-                            Buscar Envio
-                            <div className={`${obj['sb-sidenav-collapse-arrow']}`}><i class="fas fa-angle-down"></i></div>
-                        </a>
+        <div id="layoutSidenav_nav">
+                <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div className="sb-sidenav-menu">
+                        <div className="nav">
+                            <div className="sb-sidenav-menu-heading"></div>
+                            <a className="nav-link" href="index.html">
+                                <div className="sb-nav-link-icon"><i className="fa fa-home" aria-hidden="true"/></div>
+                                Home
+                            </a>
+                            <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>
+                                Opciones
+                                <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                            </a>
+                            <div className="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav className="sb-sidenav-menu-nested nav">
+                                    <a className="nav-link" href="layout-static.html">Programar Envio</a>
+                                    <a className="nav-link" href="layout-sidenav-light.html">Programar Recogida</a>
+                                    <a className="nav-link" href="layout-sidenav-light.html">Buscar Envio</a>
+                                </nav>
+                            </div>
+                            <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div className="sb-nav-link-icon"><i className="fas fa-book-open"></i></div>
+                                Pages
+                                <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                            </a>
+                            
+                            <div className="sb-sidenav-menu-heading">Configuración</div>
+                            <a className="nav-link" href="charts.html">
+                                <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+                                Estadisticas
+                            </a>
+                            <a className="nav-link" href="tables.html">
+                                <div className="sb-nav-link-icon"><i className="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </div>
-    </div>
+                    <div className="sb-sidenav-footer">
+                        <div className="small">Logged in as:</div>
+                          Servi Red
+                    </div>
+                </nav>
+            </div>
     );
 }
-
-
-

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from'../css/slidebar.module.css' 
 
 export default function SlideBar(){
-        window.addEventListener('DOMContentLoaded', event => {
+        window.addEventListener('DOMContentLoaded', () => {
             const $containerFixed = document.querySelector(`.${styles['container-fixed']}`)
             window.innerWidth >= 1500 ?
             $containerFixed.innerHTML += `<div class=${styles["container-move"]}>${document.querySelectorAll(`.${styles["container-move"]}`)[1].innerHTML}</div>`  
