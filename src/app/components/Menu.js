@@ -24,9 +24,9 @@ export default function Menu () {
                             </a>
                             <div className="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav className="sb-sidenav-menu-nested nav">
-                                    <a className="nav-link" href="layout-static.html">Programar Envio</a>
-                                    <a className="nav-link" href="layout-sidenav-light.html">Programar Recogida</a>
-                                    <a className="nav-link" href="layout-sidenav-light.html">Buscar Envio</a>
+                                    <a className="nav-link" href="/programarEnvio">Programar Envio</a>
+                                    <a className="nav-link" href="/BuscarEnvio">BusCar Envio</a>
+                                    <a className="nav-link" href="/BuscarEnvio">Buscar Envio</a>
                                 </nav>
                             </div>
                             <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

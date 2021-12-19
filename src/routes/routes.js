@@ -19,4 +19,13 @@ router.get('/BuscarEnvio', (req, res) => {
 router.get('/ProgramarEnvio', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../public/programarEnvio.html'))
 })
+router.get('/CancelarOrden', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../public/cancelarOrden.html'))
+})
+router.get('/DetalleEnvio', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../public/detalleEnvio.html'))
+})
+router.get('/DetalleRastreo', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../public/detalleRastreo.html'))
+})
 module.exports = router

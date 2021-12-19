@@ -6,6 +6,9 @@ module.exports = {
       register: "/src/app/register.js",
       BuscarEnvio: '/src/app/BuscarEnvio.js',
       ProgramarEnvio: '/src/app/ProgramarEnvio.js',
+      cancelarOrden: "/src/app/cancelarOrden.js",
+      detalleEnvio: '/src/app/detalleEnvio.js',
+      detalleRastreo: '/src/app/detalleRastreo.js',
       // rutas aqui
       // rutas aqui
     },
