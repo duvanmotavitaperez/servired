@@ -17,8 +17,9 @@ export default function SlideBar(){
             let count = 0
             let conf = true
         
-            $containerFixed.addEventListener('click', () => conf = false)
-            $containerFixed.addEventListener('mouseout', () => conf = true)
+            $containerFixed.addEventListener('click', () => {
+                conf = false})
+            $containerFixed.addEventListener('mouseout', () => {conf = true})
             
             setInterval(()=> {
                 if(conf){
