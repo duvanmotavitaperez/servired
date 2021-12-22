@@ -19,16 +19,30 @@ function Login(){
             const username = form.get('username')
             const pass = form.get('userpass')
             if(username == '' || pass == ''){
-                $alert.classList.toggle('hidden')
-                $textArea.addEventListener('focus', () => $alert.classList.add('hidden'))
+                        $alert.textContent = 'Por favor completa todos los campos'
+                        $alert.classList.remove('hidden')
+                        setTimeout(() => {
+                            $alert.classList.add('hidden')
+                        }, 5000);
             }
             else{
-                fetch(`/main`, {
-                    method: "POST",
-                    body: form,
-                }).then((response) => {
-                    response.json()
-                }).then(data => console.log(data))
+                fetch('/login', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.error){
+                        $alert.textContent = data.error
+                        $alert.classList.remove('hidden')
+                        setTimeout(() => {
+                            $alert.classList.add('hidden')
+                        }, 5000);
+                    }
+                    else{
+                        window.location.href = `${window.origin}/Home`
+                    }
+                })
             }
             
         })
@@ -39,15 +53,17 @@ function Login(){
      
     return(
         <div className="main-container">
-            <form id="formdata" method="post">
+            <form id="formdata" method="post" action='/login'>
                 <input type="hidden" value="{{token}}"/>
                 <p className="alert hidden">Por favor completa todos los campos</p>
                 <InputItem name="username" id="username" placeholder="Nombre del usuario"/>
                 <div className="content-input">
                     <input className='input-item password' type="password" name="userpass" placeholder="Contraseña"/>
                     <span className="unmask-eye show-text" id="showText" style={{display: "inline-block"}}></span>
-                </div>   
-                 <SendButton/>
+                </div> 
+                <button>
+                  <SendButton/>
+                </button>
             </form>
         </div>
     )

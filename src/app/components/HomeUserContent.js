@@ -1,7 +1,11 @@
 import React from "react";
 
 export default function HomeUserContent () { 
+        // const $form = new FormData()
+        // $form.set('userId', )
+        // fetch('/getOrder'{
 
+        // })
         return (
             
         <div id="layoutSidenav_content">

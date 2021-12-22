@@ -9,7 +9,6 @@ function LayoutSidenavItems(){
             <Menu/>
             <BuscarEnviocontent/>
         </>
-        
     )
 }
 render(<NavBar/>, document.getElementById('nav'));

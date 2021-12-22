@@ -57,11 +57,19 @@ main.register {
             align-items: center;
             gap: 15PX;
         }
+
+         .container-items {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+         }
             .content-input {
                 padding-bottom: .5rem;
                 border-bottom: 1px solid #ffffff;
-                width: 100%;
-                margin: 10px;
+                width: 70%;
+                margin: 5px;
+                margin-top: 10px;
                 display: flex;
             }
                 .input-item::placeholder{
@@ -125,12 +133,17 @@ main.register {
                     padding: 2px;      
                 }           
                 .contain-button {
-                    margin-top: 5px;
                     text-align: center;
                     vertical-align: center;
                     color: #fff;
                     font-size: 1.5rem;
                     margin-top: 1em;
+                }
+                button{
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
                 }
                 .contain-button span {
                     margin-top: 10px;

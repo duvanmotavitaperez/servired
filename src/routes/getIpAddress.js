@@ -2,7 +2,6 @@ var os = require('os');
 function getIpAddress(){
     var ipAddress
     var ifaces = os.networkInterfaces()
-    
     Object.keys(ifaces).forEach(function (ifname) {
         var alias = 0
         ifaces[ifname].forEach(function (iface) {
@@ -12,7 +11,7 @@ function getIpAddress(){
             }
 
             if (alias >= 1) {
-                // this single interface has multiple ipv4 addresses
+                 // this single interface has multiple ipv4 addresses
                 ipAddress = iface.address
             } else {
                 // this interface has only one ipv4 adress
